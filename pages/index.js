@@ -32,7 +32,7 @@ export default function index({ person }) {
           nisi? Numquam, dolore? Quam, magnam dicta? Nobis blanditiis nulla in.
           Nostrum illo iusto fugiat rem accusamus.
         </p>
-        <Button onClick={onToggle} _focus={{ outline: 0 }}>
+        <Button onClick={onToggle} _focus={{ outline: 0 }} className='button'>
           Klik hier voor mijn info
         </Button>
         <ScaleFade initialScale={0.9} in={isOpen}>
