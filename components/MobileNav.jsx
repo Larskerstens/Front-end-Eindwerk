@@ -34,8 +34,8 @@ function mobileNav() {
         color='whitesmoke'
         m={4}
         px={4}
-        py={7}
-        fontSize='2.6em'
+        py={5}
+        fontSize='1.8em'
         transition='.4s'
         _focus={{ outline: 0 }}
         _hover={{
@@ -53,13 +53,13 @@ function mobileNav() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton
-            fontSize='1.5em'
+            fontSize='1.3em'
             mx={4}
             my={3}
             _focus={{ outline: 0 }}
             _hover={{ background: "none", opacity: 0.6 }}
           />
-          <DrawerHeader borderBottom='1px solid #025902' my={3} fontSize='17px'>
+          <DrawerHeader borderBottom='1px solid #025902' my={3} fontSize='18px'>
             Korfbalplatform
           </DrawerHeader>
 

@@ -7,30 +7,20 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
 }
-
-h1 {
-  font-size: 3.4em !important;
-  line-height: 1.2 !important;
-}
-h2 {
-  font-size: 2.6em !important;
-  line-height: 1.3 !important;
-}
 p {
-  font-size: 1.8em !important;
-  line-height: 1.5 !important;
+  font-size: 1.125em;
+  line-height: 1.5;
 }
 .button {
-  font-size: 1.6em !important;
-  line-height: 1.5 !important;
-  padding: 16px !important;
+  font-size: 1em;
+  margin: 1.7em 0em;
 }
 
 #fullpage {
@@ -42,7 +32,7 @@ p {
 .menu {
   background-color: $donkergroen;
   justify-content: flex-end;
-  font-size: 1.8em;
+  font-size: 1.125em;
   padding-right: 10px;
   color: $wit;
   z-index: 2;
@@ -66,8 +56,7 @@ p {
   padding: 24px 7px 6px 7px;
   border-bottom: 2px solid transparent;
   transition: all 0.4s;
-  color: $blauw;
-  font-size: 1.6em;
+  font-size: 17px;
   &:hover {
     border-bottom: 2px solid $blauw;
   }

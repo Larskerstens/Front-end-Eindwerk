@@ -6,6 +6,7 @@ import {
   useDisclosure,
   Button,
   Box,
+  Text,
 } from "@chakra-ui/react";
 
 export default function index({ person }) {
@@ -18,25 +19,32 @@ export default function index({ person }) {
       </Head>
 
       <Flex justifyContent='center' alignItems='center' flexDirection='column'>
-        <Heading padding='.5em' as='h1'>
+        <Heading
+          padding='.5em'
+          fontSize={["22px", "26px", "30px", "34px"]}
+          textAlign='center'
+        >
           Welkom op de hoofdpagina van ons Korfbalplatform
         </Heading>
-        <Heading fontSize='1.5em' mb='1.5em'>
+        <Heading
+          fontSize={["20px", "22px", "23px", "26px"]}
+          mb={["20px", "22px", "23px", "26px"]}
+        >
           Peroonlijke info
         </Heading>
-        <p className='test'>
+        <Text as='p'>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad ipsa
           dolores consectetur ipsam laudantium magni error obcaecati laborum
           dignissimos quia eligendi suscipit molestiae blanditiis, possimus
           mollitia. Magni optio voluptate porro aliquid sunt expedita? Veniam,
           nisi? Numquam, dolore? Quam, magnam dicta? Nobis blanditiis nulla in.
           Nostrum illo iusto fugiat rem accusamus.
-        </p>
+        </Text>
         <Button onClick={onToggle} _focus={{ outline: 0 }} className='button'>
           Klik hier voor mijn info
         </Button>
         <ScaleFade initialScale={0.9} in={isOpen}>
-          <Box p='40px' color='white' mt='4' rounded='md' shadow='md'>
+          <Box p='40px' color='black' mt='4' rounded='md' shadow='md'>
             <p>Naam: {person.name}</p>
             <p>Leeftijd: {person.age}</p>
             <p>Postcode: {person.postcode}</p>
