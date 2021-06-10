@@ -4,6 +4,28 @@
   height: auto;
 }
 
+@mixin divider() {
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 0.09em;
+    min-width: 30vw;
+  }
+  &::before {
+    background: linear-gradient(to right, rgba(240, 240, 240, 0), #000);
+    margin-right: 15px;
+  }
+  &::after {
+    background: linear-gradient(to left, rgba(240, 240, 240, 0), #000);
+    margin-left: 15px;
+  }
+}
+
 @mixin make-col($cols, $gap) {
   display: flex;
   flex-wrap: wrap;

@@ -1,5 +1,5 @@
 import { ThemeProvider, theme, CSSReset, Box } from "@chakra-ui/react";
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 import "../css/style.scss";
 
 function MyApp({ Component, pageProps }) {

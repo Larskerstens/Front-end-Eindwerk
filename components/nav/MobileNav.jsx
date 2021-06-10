@@ -32,7 +32,7 @@ function mobileNav() {
         onClick={onOpen}
         background='#025902'
         color='whitesmoke'
-        m={4}
+        m={2}
         px={4}
         py={5}
         fontSize='1.8em'
@@ -40,16 +40,14 @@ function mobileNav() {
         _focus={{ outline: 0 }}
         _hover={{
           opacity: 0.6,
-        }}
-      >
+        }}>
         <HamburgerIcon />
       </Button>
       <Drawer
         isOpen={isOpen}
         placement='right'
         onClose={onClose}
-        finalFocusRef={btnRef}
-      >
+        finalFocusRef={btnRef}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton

@@ -64,8 +64,27 @@ p {
     padding: 6px 7px;
   }
 }
-/*------------------ pokedex ----------------- */
+/*------------------ Agenda ----------------- */
 
+.divider {
+  @include divider;
+}
+
+.agendapunt {
+  margin-top: 15px;
+  width: 100% !important;
+  max-width: 750px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 7px solid $lichtgroen;
+  background: #fdfdfd !important;
+  padding: 70px !important;
+}
+.agendapuntinfo {
+  padding: 20px;
+  margin: 2px auto;
+  max-width: 750px;
+  text-align: center;
+}
 /*------------------ cocktail ----------------- */
 
 /*------------------ aoe ----------------- */

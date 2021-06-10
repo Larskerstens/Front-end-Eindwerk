@@ -8,6 +8,7 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
+import Agenda from "../components/agenda/agendapunt";
 
 export default function index({ person }) {
   const { isOpen, onToggle } = useDisclosure();
@@ -17,15 +18,29 @@ export default function index({ person }) {
       <Head>
         <title>Agenda pagina</title>
       </Head>
-
+      <Heading
+        padding='.5em'
+        fontSize={["22px", "26px", "30px", "34px"]}
+        textAlign='center'
+      >
+        Welkom op de agenda pagina van ons Korfbalplatform
+      </Heading>
+      <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
+        Vandaag
+      </Box>
+      <Agenda />
+      <Agenda />
+      <Agenda />
+      <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
+        Juni 2021
+      </Box>
+      <Agenda />
+      <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
+        Juli 2021
+      </Box>
+      <Agenda />
+      <Agenda />
       <Flex justifyContent='center' alignItems='center' flexDirection='column'>
-        <Heading
-          padding='.5em'
-          fontSize={["22px", "26px", "30px", "34px"]}
-          textAlign='center'
-        >
-          Welkom op de hoofdpagina van ons Korfbalplatform
-        </Heading>
         <Heading
           fontSize={["20px", "22px", "23px", "26px"]}
           mb={["20px", "22px", "23px", "26px"]}
