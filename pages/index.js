@@ -6,7 +6,7 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>Agenda pagina</title>
+        <title>Agenda pagina | Korfbalplatform</title>
       </Head>
       <Box p={["4px", "9px", "14px", "18px"]}>
         <Heading

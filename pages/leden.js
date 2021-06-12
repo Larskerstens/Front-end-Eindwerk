@@ -15,7 +15,7 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>Agenda pagina</title>
+        <title>Leden pagina | Korfbalplatform</title>
       </Head>
       <Flex
         justifyContent='space-evenly'

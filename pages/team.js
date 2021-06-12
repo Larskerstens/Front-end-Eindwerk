@@ -8,7 +8,6 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
-import Agenda from "../components/agenda/agendapunt";
 
 export default function index({ person }) {
   const { isOpen, onToggle } = useDisclosure();
@@ -16,7 +15,7 @@ export default function index({ person }) {
   return (
     <>
       <Head>
-        <title>Agenda pagina</title>
+        <title>Team pagina | Korfbalplatform</title>
       </Head>
       <Heading
         padding='.5em'

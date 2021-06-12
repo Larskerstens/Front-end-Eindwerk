@@ -16,7 +16,7 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>Clubs pagina</title>
+        <title>Clubs pagina | Korfbalplatform</title>
       </Head>
       <Heading
         padding='.5em'

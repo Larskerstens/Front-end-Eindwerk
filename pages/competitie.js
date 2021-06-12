@@ -16,7 +16,7 @@ export default function index({ person }) {
   return (
     <>
       <Head>
-        <title>Agenda pagina</title>
+        <title>Wedstrijden pagina | Korfbalplatform</title>
       </Head>
       <Heading
         padding='.5em'

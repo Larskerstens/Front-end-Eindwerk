@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import {
   HStack,
@@ -27,6 +28,9 @@ function mobileNav() {
 
   return (
     <>
+      <Head>
+        <title>Groeps pagina | Korfbalplatform</title>
+      </Head>
       <Button
         ref={btnRef}
         onClick={onOpen}
