@@ -2,11 +2,8 @@ import React from "react";
 import {
   Flex,
   useDisclosure,
-  Button,
   Box,
   Text,
-  Collapse,
-  Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
@@ -14,27 +11,20 @@ import {
   VStack,
   Image,
 } from "@chakra-ui/react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 function lidkaart({ name, aname, team }) {
-  const { isOpen, onToggle } = useDisclosure();
-
   return (
     <>
       <AccordionItem className='liditem'>
         <h2>
           <AccordionButton
-            boxShadow='white'
-            background='white'
+            className='liditembutton'
             _expanded={{
-              background: "white",
-              color: "green",
-              borderBottom: "1px solid green",
+              background: "#025902",
             }}
             _focus={{ outline: 0 }}
-            _hover={{ background: "white" }}
           >
-            <Box flex='1' textAlign='left'>
+            <Box flex={1} textAlign='left'>
               <Flex alignItems='center'>
                 <Text mr='25px' fontSize={["16px", "16px", "17px", "18px"]}>
                   {name} {aname}
@@ -45,7 +35,7 @@ function lidkaart({ name, aname, team }) {
             <AccordionIcon />
           </AccordionButton>
         </h2>
-        <AccordionPanel pb={4} fontSize='14px'>
+        <AccordionPanel pb={4} fontSize='14px' color='#f5f5F5'>
           <Flex alignItems='center'>
             <Image
               borderRadius='3xl'
@@ -53,7 +43,7 @@ function lidkaart({ name, aname, team }) {
               src='https://bit.ly/sage-adebayo'
               alt='Foto van de speler'
               fallbackSrc='https://via.placeholder.com/75?text=LK'
-              mr='4em'
+              mr={["1em", "4em"]}
             />
             <VStack alignItems='start'>
               <Text>

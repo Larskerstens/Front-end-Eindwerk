@@ -7,16 +7,16 @@ import {
   Button,
   Box,
   Text,
+  Grid,
+  Image,
 } from "@chakra-ui/react";
-import Agenda from "../components/agenda/agendapunt";
+import Club from "../components/clubs/club";
 
-export default function index({ person }) {
-  const { isOpen, onToggle } = useDisclosure();
-
+export default function index() {
   return (
     <>
       <Head>
-        <title>Agenda pagina</title>
+        <title>Clubs pagina</title>
       </Head>
       <Heading
         padding='.5em'
@@ -25,61 +25,32 @@ export default function index({ person }) {
       >
         Welkom op de CLUBS pagina van ons Korfbalplatform
       </Heading>
-      <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
-        Vandaag
-      </Box>
-      <Agenda />
-      <Agenda />
-      <Agenda />
-      <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
-        Juni 2021
-      </Box>
-      <Agenda />
-      <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
-        Juli 2021
-      </Box>
-      <Agenda />
-      <Agenda />
-      <Flex justifyContent='center' alignItems='center' flexDirection='column'>
-        <Heading
-          fontSize={["20px", "22px", "23px", "26px"]}
-          mb={["20px", "22px", "23px", "26px"]}
-        >
-          Peroonlijke info
-        </Heading>
-        <Text as='p'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad ipsa
-          dolores consectetur ipsam laudantium magni error obcaecati laborum
-          dignissimos quia eligendi suscipit molestiae blanditiis, possimus
-          mollitia. Magni optio voluptate porro aliquid sunt expedita? Veniam,
-          nisi? Numquam, dolore? Quam, magnam dicta? Nobis blanditiis nulla in.
-          Nostrum illo iusto fugiat rem accusamus.
-        </Text>
-        <Button onClick={onToggle} _focus={{ outline: 0 }} className='button'>
-          Klik hier voor mijn info
-        </Button>
-        <ScaleFade initialScale={0.9} in={isOpen}>
-          <Box p='40px' color='black' mt='4' rounded='md' shadow='md'>
-            <p>Naam: {person.name}</p>
-            <p>Leeftijd: {person.age}</p>
-            <p>Postcode: {person.postcode}</p>
-            <p>Gemeente: {person.gemeente}</p>
-          </Box>
-        </ScaleFade>
-      </Flex>
+      <Grid
+        templateColumns={[
+          "repeat(1, 1fr)",
+          "repeat(2, 1fr)",
+          "repeat(2, 1fr)",
+          "repeat(4, 1fr)",
+        ]}
+        gap={6}
+        p='1.5em'
+      >
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+        <Club />
+      </Grid>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  return {
-    props: {
-      person: {
-        name: "Lars",
-        age: 25,
-        postcode: 2650,
-        gemeente: "Edegem",
-      },
-    },
-  };
 }

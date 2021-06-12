@@ -13,8 +13,8 @@ _Mijn Front-end eindwerk van **Syntra-AB** in de opleiding Full Stack Developer_
 
 #### Uren aan dit project gewerkt:
 
--> 3u
+-> 7u
 
 #### Aantal koffies verwerkt:
 
--> 1
+-> 3

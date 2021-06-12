@@ -14,18 +14,9 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-p {
-  font-size: 1.125em;
-  line-height: 1.5;
-}
 .button {
   font-size: 1em;
   margin: 1.7em 0em;
-}
-
-#fullpage {
-  min-height: 100vh;
-  padding: 1em;
 }
 
 /*------------------ Navigatie ----------------- */
@@ -89,10 +80,23 @@ p {
   text-align: center;
 }
 /*------------------ Leden ----------------- */
-
+.color {
+  color: $lichtgroen;
+  display: inline;
+}
 .liditem {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $wit !important;
+  .liditembutton {
+    color: $donkergroen;
+    color: $wit;
+    &:hover {
+      background: $donkergroen;
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 /*------------------ aoe ----------------- */

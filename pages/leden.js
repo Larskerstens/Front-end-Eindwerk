@@ -11,65 +11,62 @@ import {
 } from "@chakra-ui/react";
 import Lid from "../components/leden/lidkaart";
 
-export default function index({ person }) {
-  const { isOpen, onToggle } = useDisclosure();
-
+export default function index() {
   return (
     <>
       <Head>
         <title>Agenda pagina</title>
       </Head>
-      <Heading
-        padding='.5em'
-        fontSize={["22px", "26px", "30px", "34px"]}
-        textAlign='center'
+      <Flex
+        justifyContent='space-evenly'
+        flexDirection={["column", "column", "column", "row"]}
       >
-        Welkom op de LEDEN pagina van ons Korfbalplatform
-      </Heading>
-
-      <Accordion maxW='750px' margin='0 auto' allowToggle>
-        <Lid name='Lars' aname='Kerstens' team='kern' />
-        <Lid name='Imke' aname='Loos' team='kern' />
-        <Lid name='Jens' aname='Verbruggen' team='kern' />
-        <Lid name='elin' aname='Loos' team='kern' />
-        <Lid name='Lars' aname='Kerstens' team='kern' />
-        <Lid name='Imke' aname='Loos' team='kern' />
-        <Lid name='Jens' aname='Verbruggen' team='kern' />
-        <Lid name='elin' aname='Loos' team='kern' />
-        <Lid name='Lars' aname='Kerstens' team='kern' />
-        <Lid name='Imke' aname='Loos' team='kern' />
-        <Lid name='Jens' aname='Verbruggen' team='kern' />
-        <Lid name='elin' aname='Loos' team='kern' />
-        <Lid name='Lars' aname='Kerstens' team='kern' />
-        <Lid name='Imke' aname='Loos' team='kern' />
-        <Lid name='Jens' aname='Verbruggen' team='kern' />
-        <Lid name='elin' aname='Loos' team='kern' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-        <Lid name='Janne' aname='Loos' team='U19' />
-      </Accordion>
+        <Heading fontSize={["22px", "26px", "30px", "34px"]} m='34px'>
+          <Box borderLeft='3px solid #14a614' textAlign='left' pl='25px'>
+            <Text>
+              <div className='color'>Leden</div> van
+            </Text>
+            <Text>de club</Text>
+          </Box>
+        </Heading>
+        <Box backgroundColor='#025902' maxW='900px' w='100%' mb='15px'>
+          <Accordion
+            maxW='750px'
+            padding={["10px", "18px"]}
+            margin='0 auto 15px'
+            allowToggle
+          >
+            <Lid name='Lars' aname='Kerstens' team='kern' />
+            <Lid name='Imke' aname='Loos' team='kern' />
+            <Lid name='Jens' aname='Verbruggen' team='kern' />
+            <Lid name='elin' aname='Loos' team='kern' />
+            <Lid name='Lars' aname='Kerstens' team='kern' />
+            <Lid name='Imke' aname='Loos' team='kern' />
+            <Lid name='Jens' aname='Verbruggen' team='kern' />
+            <Lid name='elin' aname='Loos' team='kern' />
+            <Lid name='Lars' aname='Kerstens' team='kern' />
+            <Lid name='Imke' aname='Loos' team='kern' />
+            <Lid name='Jens' aname='Verbruggen' team='kern' />
+            <Lid name='elin' aname='Loos' team='kern' />
+            <Lid name='Lars' aname='Kerstens' team='kern' />
+            <Lid name='Imke' aname='Loos' team='kern' />
+            <Lid name='Jens' aname='Verbruggen' team='kern' />
+            <Lid name='elin' aname='Loos' team='kern' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+            <Lid name='Janne' aname='Loos' team='U19' />
+          </Accordion>
+        </Box>
+      </Flex>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  return {
-    props: {
-      person: {
-        name: "Lars",
-        age: 25,
-        postcode: 2650,
-        gemeente: "Edegem",
-      },
-    },
-  };
 }
