@@ -23,23 +23,8 @@ export default function index({ person }) {
         fontSize={["22px", "26px", "30px", "34px"]}
         textAlign='center'
       >
-        Welkom op de AGENDA pagina van ons Korfbalplatform
+        Welkom op de TEAM pagina van ons Korfbalplatform
       </Heading>
-      <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
-        Vandaag
-      </Box>
-      <Agenda />
-      <Agenda />
-      <Agenda />
-      <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
-        Juni 2021
-      </Box>
-      <Agenda />
-      <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
-        Juli 2021
-      </Box>
-      <Agenda />
-      <Agenda />
       <Flex justifyContent='center' alignItems='center' flexDirection='column'>
         <Heading
           fontSize={["20px", "22px", "23px", "26px"]}

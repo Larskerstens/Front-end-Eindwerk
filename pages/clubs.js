@@ -23,7 +23,7 @@ export default function index({ person }) {
         fontSize={["22px", "26px", "30px", "34px"]}
         textAlign='center'
       >
-        Welkom op de AGENDA pagina van ons Korfbalplatform
+        Welkom op de CLUBS pagina van ons Korfbalplatform
       </Heading>
       <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
         Vandaag

@@ -29,7 +29,7 @@ function navigation() {
             </Link>
           </Menu>
           <Menu>
-            <Link href='/club' passHref>
+            <Link href='/clubs' passHref>
               <MenuButton className='menuitem'>
                 <a title='Ga naar de Clubs pagina'>Clubs</a>
               </MenuButton>

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Flex,
   useDisclosure,
@@ -15,7 +14,7 @@ function agendapunt() {
   return (
     <>
       <Flex justifyContent='center'>
-        <Box mr='10px' mt='10px'>
+        <Box mr='10px' mt='8px' fontSize={["12px", "12px", "14px", "14px"]}>
           <Text>Zo</Text>
           <Text fontWeight='bold'>27</Text>
         </Box>
@@ -25,17 +24,27 @@ function agendapunt() {
           className='agendapunt'
         >
           <VStack>
-            <Text fontSize='18px' maxW='75vw' isTruncated>
+            <Text
+              fontSize={["16px", "16px", "17px", "18px"]}
+              maxW='75vw'
+              isTruncated
+            >
               Wedstrijd | Voorwaarts KKc - Borgerhout/Groen-Wit
             </Text>
-            <Text fontSize='14px'>Zo 27 Juni | 15u00 - 17u00</Text>
+            <Text fontSize={["12px", "12px", "14px", "14px"]}>
+              Zo 27 Juni | 15u00 - 17u00
+            </Text>
           </VStack>
         </Button>
       </Flex>
       <Collapse in={isOpen} animateOpacity>
-        <Box ml='15px' w='100%'>
+        <Box>
           <Box className='agendapuntinfo' rounded='md' shadow='md'>
-            <Text>info about agendapunt</Text>
+            <Text>Locatie: Ergens</Text>
+            <Text>Datum & Tijd: 27 Juni 2021 15:00</Text>
+            <Text>Team: Kern</Text>
+            <Text>Groep: </Text>
+            <Text></Text>
           </Box>
         </Box>
       </Collapse>

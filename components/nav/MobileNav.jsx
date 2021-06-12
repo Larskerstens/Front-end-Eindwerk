@@ -40,14 +40,16 @@ function mobileNav() {
         _focus={{ outline: 0 }}
         _hover={{
           opacity: 0.6,
-        }}>
+        }}
+      >
         <HamburgerIcon />
       </Button>
       <Drawer
         isOpen={isOpen}
         placement='right'
         onClose={onClose}
-        finalFocusRef={btnRef}>
+        finalFocusRef={btnRef}
+      >
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton
@@ -85,7 +87,7 @@ function mobileNav() {
                 </Link>
               </Menu>
               <Menu>
-                <Link href='/club' passHref>
+                <Link href='/clubs' passHref>
                   <MenuButton onClick={CloseDraw} className='mobilenavitem'>
                     <a title='Ga naar de Clubs pagina'>Clubs</a>
                   </MenuButton>
