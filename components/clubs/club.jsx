@@ -4,15 +4,7 @@ import { Flex, Text, Image } from "@chakra-ui/react";
 function club() {
   return (
     <>
-      <Flex
-        p='2em'
-        flexDir='column'
-        alignItems='center'
-        justifyContent='center'
-        bg='#F1F1F1'
-        border='3px solid transparent'
-        _hover={{ border: "3px solid green" }}
-      >
+      <Flex className='clubcard'>
         <Image
           w='auto'
           maxH='200px'

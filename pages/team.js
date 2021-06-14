@@ -1,69 +1,44 @@
 import Head from "next/head";
-import {
-  Heading,
-  Flex,
-  ScaleFade,
-  useDisclosure,
-  Button,
-  Box,
-  Text,
-} from "@chakra-ui/react";
+import { Heading, Box, Text, Grid } from "@chakra-ui/react";
+import Team from "../components/teams/team";
 
-export default function index({ person }) {
-  const { isOpen, onToggle } = useDisclosure();
-
+export default function index() {
   return (
     <>
       <Head>
-        <title>Team pagina | Korfbalplatform</title>
+        <title>Teams pagina | Korfbalplatform</title>
       </Head>
       <Heading
-        padding='.5em'
+        as='h1'
         fontSize={["22px", "26px", "30px", "34px"]}
+        padding={["22px", "26px", "30px", "34px"]}
         textAlign='center'
       >
-        Welkom op de TEAM pagina van ons Korfbalplatform
+        <Box>
+          <Text>
+            <div className='color'>Teams</div> van Voorwaarts KKc
+          </Text>
+        </Box>
       </Heading>
-      <Flex justifyContent='center' alignItems='center' flexDirection='column'>
-        <Heading
-          fontSize={["20px", "22px", "23px", "26px"]}
-          mb={["20px", "22px", "23px", "26px"]}
-        >
-          Peroonlijke info
-        </Heading>
-        <Text as='p'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad ipsa
-          dolores consectetur ipsam laudantium magni error obcaecati laborum
-          dignissimos quia eligendi suscipit molestiae blanditiis, possimus
-          mollitia. Magni optio voluptate porro aliquid sunt expedita? Veniam,
-          nisi? Numquam, dolore? Quam, magnam dicta? Nobis blanditiis nulla in.
-          Nostrum illo iusto fugiat rem accusamus.
-        </Text>
-        <Button onClick={onToggle} _focus={{ outline: 0 }} className='button'>
-          Klik hier voor mijn info
-        </Button>
-        <ScaleFade initialScale={0.9} in={isOpen}>
-          <Box p='40px' color='black' mt='4' rounded='md' shadow='md'>
-            <p>Naam: {person.name}</p>
-            <p>Leeftijd: {person.age}</p>
-            <p>Postcode: {person.postcode}</p>
-            <p>Gemeente: {person.gemeente}</p>
-          </Box>
-        </ScaleFade>
-      </Flex>
+      <Grid
+        className='clubs'
+        templateColumns={[
+          "repeat(1, 1fr)",
+          "repeat(2, 1fr)",
+          "repeat(2, 1fr)",
+          "repeat(4, 1fr)",
+        ]}
+        gap={6}
+        p='0 1.5em 2.2em'
+      >
+        <Team team='Kern' />
+        <Team team='U19' />
+        <Team team='U16' />
+        <Team team='U14' />
+        <Team team='U12' />
+        <Team team='U10' />
+        <Team team='U8' />
+      </Grid>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  return {
-    props: {
-      person: {
-        name: "Lars",
-        age: 25,
-        postcode: 2650,
-        gemeente: "Edegem",
-      },
-    },
-  };
 }

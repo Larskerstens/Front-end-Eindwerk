@@ -14,6 +14,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 .button {
   font-size: 1em;
   margin: 1.7em 0em;
@@ -83,6 +84,8 @@ a {
 .color {
   color: $lichtgroen;
   display: inline;
+  border-left: 3px solid #14a614;
+  padding-left: 20px;
 }
 .liditem {
   border: none;
@@ -99,7 +102,32 @@ a {
   }
 }
 
-/*------------------ aoe ----------------- */
+/*------------------ Clubs ----------------- */
+.clubs {
+  &:hover .clubcard {
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(0.98);
+    box-shadow: none;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+  }
+  .clubcard {
+    padding: 2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1f1;
+    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.4 all;
+    &:hover {
+      transform: scale(1);
+      filter: blur(0px);
+      opacity: 1;
+      box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+    }
+  }
+}
 
 /* ------------------- footer ------------------*/
 .footer {

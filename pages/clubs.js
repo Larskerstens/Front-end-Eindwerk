@@ -19,13 +19,19 @@ export default function index() {
         <title>Clubs pagina | Korfbalplatform</title>
       </Head>
       <Heading
-        padding='.5em'
+        as='h1'
         fontSize={["22px", "26px", "30px", "34px"]}
+        padding={["22px", "26px", "30px", "34px"]}
         textAlign='center'
       >
-        Welkom op de CLUBS pagina van ons Korfbalplatform
+        <Box>
+          <Text>
+            <div className='color'>Clubs</div> van De Belgische korfbal
+          </Text>
+        </Box>
       </Heading>
       <Grid
+        className='clubs'
         templateColumns={[
           "repeat(1, 1fr)",
           "repeat(2, 1fr)",
