@@ -25,7 +25,7 @@ function team({ team }) {
           <Image
             w='auto'
             maxH='200px'
-            src={"./images/" + team + ".jpg"}
+            src={"./images/teams/" + team + ".jpg"}
             alt='Foto van de speler'
             fallbackSrc='https://via.placeholder.com/200?text=VW'
           />

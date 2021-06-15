@@ -1,33 +1,23 @@
 import React from "react";
-import { Flex, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Flex, Text, Image } from "@chakra-ui/react";
 
-export default function club({ name }) {
+export default function groep({ name }) {
   //console.log(data);
   return (
     /* {clubs.map((club) => ( */
     <>
       <Flex className='clubcard'>
         <Image
-          width='250px'
-          height='200px'
-          //src={"/images/clubs/korfbal.png"}
-          placeholder='blur'
-          blurDataURL='data:image/png;base64,/9j/LDSs1?WFOvoa$~j]W@ad?woeD#R.'
-          src={"/images/clubs/" + name + ".png"}
+          w='auto'
+          maxH='200px'
+          src={"./images/groepen/" + name + ".jpg"}
           alt='Foto van de speler'
-          fallbackSrc='./images/clubs/korfbal.png'
+          fallbackSrc='https://via.placeholder.com/200?text=VW'
         />
         <Text fontSize='24px' fontWeight='bold' mt='24px'>
           {/* {club.naam} */}
           {/* {clubs.naam} */}
-          naam
-        </Text>
-        <Text fontSize='18px' fontWeight='bold' mt='10px'>
-          {/* {club.straat} {club.huisnr} */}testen
-        </Text>
-        <Text fontSize='18px' fontWeight='bold'>
-          Postcode
+          {name}
         </Text>
       </Flex>
     </>

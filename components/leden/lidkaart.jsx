@@ -40,7 +40,7 @@ function lidkaart({ name, aname, team }) {
             <Image
               borderRadius='3xl'
               boxSize='75px'
-              src='https://bit.ly/sage-adebayo'
+              src={"./images/leden/" + name + aname + ".png"}
               alt='Foto van de speler'
               fallbackSrc='https://via.placeholder.com/75?text=LK'
               mr={["1em", "4em"]}

@@ -8,13 +8,14 @@ _Mijn Front-end eindwerk van **Syntra-AB** in de opleiding Full Stack Developer_
 -> Vanilla js <br>
 -> Chakra Ui <br>
 -> Cascading Style Sheets (CSS) <br>
+-> SCSS <br>
 -> HTML <br>
 -> jsx <br>
 
 #### Uren aan dit project gewerkt:
 
--> 7u
+-> 9u
 
 #### Aantal koffies verwerkt:
 
--> 3
+-> 5

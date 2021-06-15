@@ -1,18 +1,8 @@
 import Head from "next/head";
-import {
-  Heading,
-  Flex,
-  ScaleFade,
-  useDisclosure,
-  Button,
-  Box,
-  Text,
-  Grid,
-  Image,
-} from "@chakra-ui/react";
+import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Club from "../components/clubs/club";
 
-export default function index() {
+export default function index({ clubs }) {
   return (
     <>
       <Head>
@@ -41,22 +31,29 @@ export default function index() {
         gap={6}
         p='1.5em'
       >
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
-        <Club />
+        <Club name='bkc' /* data={clubs} */ />
+        <Club name='vw' />
+        <Club name='kce' />
+        <Club name='verde' />
+        <Club name='sikopi' />
+        <Club name='catba' />
+        <Club name='ri4a' />
+        <Club name='kcs' />
+        <Club name='kcmi' />
       </Grid>
     </>
   );
 }
+
+/* export async function getStaticProps() {
+  const response = await fetch("http://localhost:8000//api/clubs.jsonld");
+  const data = await response.json();
+  const clubs = data.data["hydra:memeber"];
+  return {
+    props: {
+      clubs,
+    },
+    revalidate: 3600,
+  };
+}
+ */

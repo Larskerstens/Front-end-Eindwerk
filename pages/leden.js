@@ -39,19 +39,19 @@ export default function index() {
             <Lid name='Lars' aname='Kerstens' team='kern' />
             <Lid name='Imke' aname='Loos' team='kern' />
             <Lid name='Jens' aname='Verbruggen' team='kern' />
-            <Lid name='elin' aname='Loos' team='kern' />
+            <Lid name='Lauren' aname='Denis' team='kern' />
             <Lid name='Lars' aname='Kerstens' team='kern' />
             <Lid name='Imke' aname='Loos' team='kern' />
             <Lid name='Jens' aname='Verbruggen' team='kern' />
-            <Lid name='elin' aname='Loos' team='kern' />
+            <Lid name='Lauren' aname='Denis' team='kern' />
             <Lid name='Lars' aname='Kerstens' team='kern' />
             <Lid name='Imke' aname='Loos' team='kern' />
             <Lid name='Jens' aname='Verbruggen' team='kern' />
-            <Lid name='elin' aname='Loos' team='kern' />
+            <Lid name='Lauren' aname='Denis' team='kern' />
             <Lid name='Lars' aname='Kerstens' team='kern' />
             <Lid name='Imke' aname='Loos' team='kern' />
             <Lid name='Jens' aname='Verbruggen' team='kern' />
-            <Lid name='elin' aname='Loos' team='kern' />
+            <Lid name='Lauren' aname='Denis' team='kern' />
             <Lid name='Janne' aname='Loos' team='U19' />
             <Lid name='Janne' aname='Loos' team='U19' />
             <Lid name='Janne' aname='Loos' team='U19' />
