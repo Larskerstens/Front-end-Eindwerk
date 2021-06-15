@@ -10,7 +10,7 @@ export default function groep({ name }) {
         <Image
           w='auto'
           maxH='200px'
-          src={"./images/groepen/" + name + ".jpg"}
+          src={"./images/groepen/" + name + ".png"}
           alt='Foto van de speler'
           fallbackSrc='https://via.placeholder.com/200?text=VW'
         />

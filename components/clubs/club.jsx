@@ -1,6 +1,5 @@
 import React from "react";
-import { Flex, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Flex, Text, Image } from "@chakra-ui/react";
 
 export default function club({ name }) {
   //console.log(data);
@@ -12,16 +11,14 @@ export default function club({ name }) {
           width='250px'
           height='200px'
           //src={"/images/clubs/korfbal.png"}
-          placeholder='blur'
-          blurDataURL='data:image/png;base64,/9j/LDSs1?WFOvoa$~j]W@ad?woeD#R.'
-          src={"/images/clubs/" + name + ".png"}
+          src={"./images/clubs/" + name + ".png"}
           alt='Foto van de speler'
           fallbackSrc='./images/clubs/korfbal.png'
         />
         <Text fontSize='24px' fontWeight='bold' mt='24px'>
           {/* {club.naam} */}
           {/* {clubs.naam} */}
-          naam
+          {name}
         </Text>
         <Text fontSize='18px' fontWeight='bold' mt='10px'>
           {/* {club.straat} {club.huisnr} */}testen
