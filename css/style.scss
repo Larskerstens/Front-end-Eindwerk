@@ -91,6 +91,11 @@ a {
   border-left: 3px solid #14a614;
   padding-left: 20px;
 }
+.colornoborder {
+  color: $lichtgroen;
+  display: inline;
+}
+
 .liditem {
   border: none;
   border-bottom: 1px solid $wit !important;
@@ -107,8 +112,11 @@ a {
 }
 
 /*------------------ Clubs ----------------- */
-.clubs {
-  &:hover .clubcard {
+.clubs,
+.groepen,
+.teams {
+  &:hover .groepcard,
+  &:hover .teamcard {
     filter: blur(3px);
     opacity: 0.5;
     transform: scale(0.85);
@@ -117,7 +125,8 @@ a {
     border-radius: 2px;
   }
   .clubcard,
-  .clubcardnohover {
+  .groepcard,
+  .teamcard {
     padding: 2em;
     flex-direction: column;
     align-items: center;

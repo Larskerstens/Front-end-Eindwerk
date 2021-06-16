@@ -8,7 +8,7 @@ export default function index() {
       <Head>
         <title>Agenda pagina | Korfbalplatform</title>
       </Head>
-      <Box p={["4px", "9px", "14px", "18px"]}>
+      <Box p={["6px", "9px", "14px", "18px"]}>
         <Heading
           as='h1'
           fontSize={["22px", "26px", "30px", "34px"]}

@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Flex,
-  useDisclosure,
   Box,
   Text,
   AccordionItem,
@@ -42,7 +41,7 @@ function lidkaart({ name, aname, team }) {
               boxSize='75px'
               src={"./images/leden/" + name + aname + ".png"}
               alt='Foto van de speler'
-              fallbackSrc='https://via.placeholder.com/75?text=LK'
+              fallbackSrc='./images/leden/person.jpg'
               mr={["1em", "4em"]}
             />
             <VStack alignItems='start'>

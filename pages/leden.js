@@ -24,7 +24,7 @@ export default function index() {
         <Heading fontSize={["22px", "26px", "30px", "34px"]} m='34px'>
           <Box borderLeft='3px solid #14a614' textAlign='left' pl='25px'>
             <Text>
-              <div className='color'>Leden</div> van
+              <div className='colornoborder'>Leden</div> van
             </Text>
             <Text>de club</Text>
           </Box>

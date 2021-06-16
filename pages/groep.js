@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Groep from "../components/groepen/groep";
 
-export default function index({ clubs }) {
+export default function index({ groepen }) {
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ export default function index({ clubs }) {
         </Box>
       </Heading>
       <Grid
-        className='clubs'
+        className='groepen'
         templateColumns={[
           "repeat(1, 1fr)",
           "repeat(2, 1fr)",
@@ -47,12 +47,12 @@ export default function index({ clubs }) {
 }
 
 /* export async function getStaticProps() {
-  const response = await fetch("http://localhost:8000//api/clubs.jsonld");
+  const response = await fetch("http://localhost:8000//api/groeps.jsonld");
   const data = await response.json();
-  const clubs = data.data["hydra:memeber"];
+  const groepen = data.data["hydra:memeber"];
   return {
     props: {
-      clubs,
+      groepen,
     },
     revalidate: 3600,
   };

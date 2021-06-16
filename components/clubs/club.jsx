@@ -6,7 +6,7 @@ export default function club({ name }) {
   return (
     /* {clubs.map((club) => ( */
     <>
-      <Flex className='clubcardnohover'>
+      <Flex className='clubcard'>
         <Image
           width='250px'
           height='auto'

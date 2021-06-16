@@ -21,13 +21,13 @@ function team({ team }) {
   return (
     <>
       <a onClick={onOpen}>
-        <Flex className='clubcard'>
+        <Flex className='teamcard'>
           <Image
             w='auto'
             maxH='200px'
             src={"./images/teams/" + team + ".jpg"}
-            alt='Foto van de speler'
-            fallbackSrc='https://via.placeholder.com/200?text=VW'
+            alt='Foto van het team dat speelt bij Voorwaarts kkc'
+            fallbackSrc='https://via.placeholder.com/300x200/025902/fbfbfb?text=VW'
           />
           <Text fontSize='24px' fontWeight='bold' mt='24px'>
             {team}
@@ -63,7 +63,7 @@ function team({ team }) {
                 <Lid name='elin' aname='Loos' team='kern' />
                 <Lid name='Lars' aname='Kerstens' team='kern' />
                 <Lid name='Imke' aname='Loos' team='kern' />
-                <Lid name='Jens' aname='Verbruggen' team='kern' />
+                <Lid name='Lauren' aname='Denis' team='kern' />
               </Accordion>
             </Box>
           </DrawerBody>

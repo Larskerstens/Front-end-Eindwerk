@@ -21,7 +21,7 @@ export default function index() {
         </Box>
       </Heading>
       <Grid
-        className='clubs'
+        className='teams'
         templateColumns={[
           "repeat(1, 1fr)",
           "repeat(2, 1fr)",
