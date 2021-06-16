@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Text, Image, Box } from "@chakra-ui/react";
+import { Flex, Text, Image, Box, Skeleton } from "@chakra-ui/react";
 
 export default function club({ name }) {
   //console.log(data);
@@ -7,15 +7,17 @@ export default function club({ name }) {
     /* {clubs.map((club) => ( */
     <>
       <Flex className='clubcard'>
-        <Image
-          width='250px'
-          height='auto'
-          //src={"/images/clubs/korfbal.png"}
-          src={"./images/clubs/" + name + ".png"}
-          alt='Foto van de speler'
-          fallbackSrc='./images/clubs/korfbal.png'
-          borderRadius='15px'
-        />
+        <Skeleton isLoaded>
+          <Image
+            width='250px'
+            height='auto'
+            //src={"/images/clubs/korfbal.png"}
+            src={"./images/clubs/" + name + ".png"}
+            alt='Foto van de speler'
+            fallbackSrc='./images/clubs/korfbal.png'
+            borderRadius='15px'
+          />
+        </Skeleton>
         <Text fontSize='24px' fontWeight='bold' mt='24px'>
           {/* {club.naam} */}
           {/* {clubs.naam} */}

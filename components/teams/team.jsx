@@ -12,6 +12,7 @@ import {
   useDisclosure,
   Accordion,
   Box,
+  Skeleton,
 } from "@chakra-ui/react";
 
 import Lid from "../leden/lidkaart";
@@ -22,13 +23,15 @@ function team({ team }) {
     <>
       <a onClick={onOpen}>
         <Flex className='teamcard'>
-          <Image
-            w='auto'
-            maxH='200px'
-            src={"./images/teams/" + team + ".jpg"}
-            alt='Foto van het team dat speelt bij Voorwaarts kkc'
-            fallbackSrc='https://via.placeholder.com/300x200/025902/fbfbfb?text=VW'
-          />
+          <Skeleton isLoaded>
+            <Image
+              w='auto'
+              maxH='200px'
+              src={"./images/teams/" + team + ".jpg"}
+              alt='Foto van het team dat speelt bij Voorwaarts kkc'
+              fallbackSrc='https://via.placeholder.com/300x200/025902/fbfbfb?text=VW'
+            />
+          </Skeleton>
           <Text fontSize='24px' fontWeight='bold' mt='24px'>
             {team}
           </Text>
