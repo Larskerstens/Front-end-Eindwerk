@@ -116,7 +116,8 @@ a {
     border: 1px solid #fafafa;
     border-radius: 2px;
   }
-  .clubcard {
+  .clubcard,
+  .clubcardnohover {
     padding: 2em;
     flex-direction: column;
     align-items: center;
@@ -132,6 +133,14 @@ a {
       box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
     }
   }
+}
+.streepje {
+  content: "";
+  background-color: $lichtgroen;
+  width: 50px;
+  height: 5px;
+  margin: 20px auto;
+  border-radius: 2px;
 }
 
 /* ------------------- footer ------------------*/

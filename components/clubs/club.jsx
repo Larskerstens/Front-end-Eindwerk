@@ -1,25 +1,27 @@
 import React from "react";
-import { Flex, Text, Image } from "@chakra-ui/react";
+import { Flex, Text, Image, Box } from "@chakra-ui/react";
 
 export default function club({ name }) {
   //console.log(data);
   return (
     /* {clubs.map((club) => ( */
     <>
-      <Flex className='clubcard'>
+      <Flex className='clubcardnohover'>
         <Image
           width='250px'
-          height='200px'
+          height='auto'
           //src={"/images/clubs/korfbal.png"}
           src={"./images/clubs/" + name + ".png"}
           alt='Foto van de speler'
           fallbackSrc='./images/clubs/korfbal.png'
+          borderRadius='15px'
         />
         <Text fontSize='24px' fontWeight='bold' mt='24px'>
           {/* {club.naam} */}
           {/* {clubs.naam} */}
           {name}
         </Text>
+        <Box className='streepje'></Box>
         <Text fontSize='18px' fontWeight='bold' mt='10px'>
           {/* {club.straat} {club.huisnr} */}testen
         </Text>
