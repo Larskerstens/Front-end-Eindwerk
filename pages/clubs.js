@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Club from "../components/clubs/club";
 
-export default function index({ clubs }) {
+export default function index({ name }) {
   return (
     <>
       <Head>
@@ -31,10 +31,10 @@ export default function index({ clubs }) {
         gap={6}
         p='1.5em'
       >
-        <Club name='bkc' /* data={clubs} */ />
-        <Club name='vw' />
-        <Club name='kce' />
-        <Club name='verde' />
+        <Club name='bkc' naam='Boeckenberg Kc' />
+        <Club name='vw' naam='Kkc Voorwaarts' />
+        <Club name='kce' naam='Kc Edegem' />
+        <Club name='verde' naam='Verde' />
         <Club name='sikopi' />
         <Club name='catba' />
         <Club name='ri4a' />
@@ -46,14 +46,16 @@ export default function index({ clubs }) {
 }
 
 /* export async function getStaticProps() {
-  const response = await fetch("http://localhost:8000//api/clubs.jsonld");
+  const response = await fetch(
+    "https://wdev2.be/lars21/eindwerk/api/clubs.json",
+  );
   const data = await response.json();
-  const clubs = data.data["hydra:memeber"];
+  console.log(data);
+  const clubs = data.data;
   return {
     props: {
       clubs,
     },
     revalidate: 3600,
   };
-}
- */
+} */

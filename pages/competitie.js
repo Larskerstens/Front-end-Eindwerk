@@ -1,70 +1,42 @@
 import Head from "next/head";
-import {
-  Heading,
-  Flex,
-  ScaleFade,
-  useDisclosure,
-  Button,
-  Box,
-  Text,
-} from "@chakra-ui/react";
-import Agenda from "../components/agenda/agendapunt";
+import { Heading, Box, Text } from "@chakra-ui/react";
+import Agenda from "../components/wedstrijden/wedstrijd";
 
-export default function index({ person }) {
-  const { isOpen, onToggle } = useDisclosure();
-
+export default function wedstrijd() {
   return (
     <>
       <Head>
         <title>Wedstrijden pagina | Korfbalplatform</title>
       </Head>
-      <Heading
-        padding='.5em'
-        fontSize={["22px", "26px", "30px", "34px"]}
-        textAlign='center'
-      >
-        Welkom op de WEDSTRIJDEN pagina van ons Korfbalplatform
-      </Heading>
-      <Flex justifyContent='center' alignItems='center' flexDirection='column'>
+      <Box p={["0 6px 6px", "0 9px 9px", "0 14px 14px", "0px 18px 18px"]}>
         <Heading
-          fontSize={["20px", "22px", "23px", "26px"]}
-          mb={["20px", "22px", "23px", "26px"]}
+          as='h1'
+          fontSize={["22px", "26px", "30px", "34px"]}
+          padding={["22px", "26px", "30px", "34px"]}
+          textAlign='center'
         >
-          Peroonlijke info
-        </Heading>
-        <Text as='p'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad ipsa
-          dolores consectetur ipsam laudantium magni error obcaecati laborum
-          dignissimos quia eligendi suscipit molestiae blanditiis, possimus
-          mollitia. Magni optio voluptate porro aliquid sunt expedita? Veniam,
-          nisi? Numquam, dolore? Quam, magnam dicta? Nobis blanditiis nulla in.
-          Nostrum illo iusto fugiat rem accusamus.
-        </Text>
-        <Button onClick={onToggle} _focus={{ outline: 0 }} className='button'>
-          Klik hier voor mijn info
-        </Button>
-        <ScaleFade initialScale={0.9} in={isOpen}>
-          <Box p='40px' color='black' mt='4' rounded='md' shadow='md'>
-            <p>Naam: {person.name}</p>
-            <p>Leeftijd: {person.age}</p>
-            <p>Postcode: {person.postcode}</p>
-            <p>Gemeente: {person.gemeente}</p>
+          <Box>
+            <Text>
+              <div className='color'>Wedstrijden</div> van Voorwaarts KKc
+            </Text>
           </Box>
-        </ScaleFade>
-      </Flex>
+        </Heading>
+        <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
+          Vandaag
+        </Box>
+        <Agenda />
+        <Agenda />
+        <Agenda />
+        <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
+          Juni 2021
+        </Box>
+        <Agenda />
+        <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
+          Juli 2021
+        </Box>
+        <Agenda />
+        <Agenda />
+      </Box>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  return {
-    props: {
-      person: {
-        name: "Lars",
-        age: 25,
-        postcode: 2650,
-        gemeente: "Edegem",
-      },
-    },
-  };
 }

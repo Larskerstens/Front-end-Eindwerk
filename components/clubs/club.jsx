@@ -1,11 +1,11 @@
 import React from "react";
 import { Flex, Text, Image, Box, Skeleton } from "@chakra-ui/react";
 
-export default function club({ name }) {
-  //console.log(data);
+export default function club({ name, naam }) {
+  //console.log(clubs);
   return (
-    /* {clubs.map((club) => ( */
     <>
+      {/* {clubs.map((club) => ( */}
       <Flex className='clubcard'>
         <Skeleton isLoaded>
           <Image
@@ -21,7 +21,7 @@ export default function club({ name }) {
         <Text fontSize='24px' fontWeight='bold' mt='24px'>
           {/* {club.naam} */}
           {/* {clubs.naam} */}
-          {name}
+          {naam}
         </Text>
         <Box className='streepje'></Box>
         <Text fontSize='18px' fontWeight='bold' mt='10px'>
@@ -31,16 +31,16 @@ export default function club({ name }) {
           Postcode
         </Text>
       </Flex>
+      {/*  ))} */}
     </>
-    /* ))} */
   );
 }
 
 /* export async function getStaticProps() {
-  const response = await fetch("https://127.0.0.1:8000/api/clubs.json");
+  const response = await fetch("https://wdev2.be/lars21/eindwerk/api/clubs");
   const data = await response.json();
-  console.log(data.data["hydra:memeber"]);
-  const clubs = data.data["hydra:memeber"];
+  console.log(data["hydra:member"]);
+  const clubs = data.data["hydra:member"];
   return {
     props: {
       clubs,

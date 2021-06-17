@@ -38,7 +38,7 @@ function navigation() {
           <Menu>
             <Link href='/competitie' passHref>
               <MenuButton className='menuitem'>
-                <a title='Ga naar de Competitie pagina'>Competitie</a>
+                <a title='Ga naar de Wedstrijden pagina'>Wedstrijden</a>
               </MenuButton>
             </Link>
           </Menu>

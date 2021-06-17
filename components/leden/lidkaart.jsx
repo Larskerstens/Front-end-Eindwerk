@@ -41,7 +41,7 @@ function lidkaart({ name, aname, team }) {
               boxSize='75px'
               src={"./images/leden/" + name + aname + ".png"}
               alt='Foto van de speler'
-              fallbackSrc='./images/leden/person.jpg'
+              fallbackSrc='./images/leden/person.png'
               mr={["1em", "4em"]}
             />
             <VStack alignItems='start'>
