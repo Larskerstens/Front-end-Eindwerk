@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Club from "../components/clubs/club";
 
-export default function index({ name }) {
+export default function index({ clubs }) {
   return (
     <>
       <Head>
@@ -31,31 +31,32 @@ export default function index({ name }) {
         gap={6}
         p='1.5em'
       >
-        <Club name='bkc' naam='Boeckenberg Kc' />
-        <Club name='vw' naam='Kkc Voorwaarts' />
-        <Club name='kce' naam='Kc Edegem' />
-        <Club name='verde' naam='Verde' />
-        <Club name='sikopi' />
-        <Club name='catba' />
-        <Club name='ri4a' />
-        <Club name='kcs' />
-        <Club name='kcmi' />
+        <Club name='Kkc Voorwaarts' naam='vw' />
+        <Club name='Verde' naam='verde' />
+        <Club name='Kwik' naam='kwik' />
+        <Club name='Scaldis' naam='kcs' />
+        <Club name='Kc Edegem' naam='vw' />
+        <Club name='Catba' naam='catba' />
+        <Club name='Minerva' naam='kcmi' />
+        <Club name='Riviera' naam='ri4a' />
+        {clubs.map((club) => (
+          <Club data={club} />
+        ))}
       </Grid>
     </>
   );
 }
 
-/* export async function getStaticProps() {
+export async function getStaticProps() {
   const response = await fetch(
     "https://wdev2.be/lars21/eindwerk/api/clubs.json",
   );
-  const data = await response.json();
-  console.log(data);
-  const clubs = data.data;
+  const clubs = await response.json();
+  console.log(clubs);
   return {
     props: {
       clubs,
     },
     revalidate: 3600,
   };
-} */
+}
