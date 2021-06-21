@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Lid from "../components/leden/lidkaart";
 
-export default function index() {
+export default function index({ persoons }) {
   return (
     <>
       <Head>
@@ -36,37 +36,25 @@ export default function index() {
             margin='0 auto 15px'
             allowToggle
           >
-            <Lid name='Lars' aname='Kerstens' team='kern' />
-            <Lid name='Imke' aname='Loos' team='kern' />
-            <Lid name='Jens' aname='Verbruggen' team='kern' />
-            <Lid name='Lauren' aname='Denis' team='kern' />
-            <Lid name='Lars' aname='Kerstens' team='kern' />
-            <Lid name='Imke' aname='Loos' team='kern' />
-            <Lid name='Jens' aname='Verbruggen' team='kern' />
-            <Lid name='Lauren' aname='Denis' team='kern' />
-            <Lid name='Lars' aname='Kerstens' team='kern' />
-            <Lid name='Imke' aname='Loos' team='kern' />
-            <Lid name='Jens' aname='Verbruggen' team='kern' />
-            <Lid name='Lauren' aname='Denis' team='kern' />
-            <Lid name='Lars' aname='Kerstens' team='kern' />
-            <Lid name='Imke' aname='Loos' team='kern' />
-            <Lid name='Jens' aname='Verbruggen' team='kern' />
-            <Lid name='Lauren' aname='Denis' team='kern' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
-            <Lid name='Janne' aname='Loos' team='U19' />
+            {persoons.map((lid) => (
+              <Lid lid={lid} />
+            ))}
           </Accordion>
         </Box>
       </Flex>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const response = await fetch(
+    "https://wdev2.be/lars21/eindwerk/api/persoons.json",
+  );
+  const persoons = await response.json();
+  return {
+    props: {
+      persoons,
+    },
+    revalidate: 3600,
+  };
 }

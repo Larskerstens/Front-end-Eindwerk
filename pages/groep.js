@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Groep from "../components/groepen/groep";
 
-export default function index({ groepen }) {
+export default function index({ groeps }) {
   return (
     <>
       <Head>
@@ -31,30 +31,23 @@ export default function index({ groepen }) {
         gap={8}
         p='1.5em'
       >
-        <Groep name='bestuur' /* data={clubs} */ />
-        <Groep name='feest' /* data={clubs} */ />
-        <Groep name='bestuur' /* data={clubs} */ />
-        <Groep name='toog' /* data={clubs} */ />
-        <Groep name='kuisen' /* data={clubs} */ />
-        <Groep name='kuisen' /* data={clubs} */ />
-        <Groep name='kuisen' /* data={clubs} */ />
-        <Groep name='kuisen' /* data={clubs} */ />
-        <Groep name='kuisen' /* data={clubs} */ />
-        <Groep name='kuisen' /* data={clubs} */ />
+        {groeps.map((groep) => (
+          <Groep groep={groep} />
+        ))}
       </Grid>
     </>
   );
 }
 
-/* export async function getStaticProps() {
-  const response = await fetch("http://localhost:8000//api/groeps.jsonld");
-  const data = await response.json();
-  const groepen = data.data["hydra:memeber"];
+export async function getStaticProps() {
+  const response = await fetch(
+    "https://wdev2.be/lars21/eindwerk/api/groeps.json",
+  );
+  const groeps = await response.json();
   return {
     props: {
-      groepen,
+      groeps,
     },
     revalidate: 3600,
   };
 }
- */

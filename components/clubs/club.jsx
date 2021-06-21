@@ -1,7 +1,8 @@
 import React from "react";
 import { Flex, Text, Image, Box, Skeleton } from "@chakra-ui/react";
 
-export default function club({ name, naam }) {
+export default function club({ club }) {
+  //console.log(club);
   return (
     <>
       <Flex className='clubcard'>
@@ -9,25 +10,21 @@ export default function club({ name, naam }) {
           <Image
             width='250px'
             height='auto'
-            //src={"/images/clubs/korfbal.png"}
-            src={"./images/clubs/" + naam + ".png"}
+            src={"./images/clubs/" + club.afkorting + ".png"}
             alt='Foto van de speler'
             fallbackSrc='./images/clubs/korfbal.png'
             borderRadius='15px'
           />
         </Skeleton>
         <Text fontSize='24px' fontWeight='bold' mt='24px'>
-          {/* {data.naam} */}
-          {name}
+          {club.naam}
         </Text>
         <Box className='streepje'></Box>
         <Text fontSize='18px' fontWeight='bold' mt='10px'>
-          {/* {data.straat} {data.huisnr} */}
-          Straatnaam 22
+          {club.straat} {club.huisnr}
         </Text>
         <Text fontSize='18px' fontWeight='bold'>
-          {/* {data.postcodeId.code} {data.postcodeId.gemeente} */}
-          2000 Antwerpen
+          {club.postcodeId.code} {club.postcodeId.gemeente}
         </Text>
       </Flex>
     </>

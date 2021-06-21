@@ -3,6 +3,7 @@ import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Club from "../components/clubs/club";
 
 export default function index({ clubs }) {
+  //console.log(clubs);
   return (
     <>
       <Head>
@@ -31,16 +32,8 @@ export default function index({ clubs }) {
         gap={6}
         p='1.5em'
       >
-        <Club name='Kkc Voorwaarts' naam='vw' />
-        <Club name='Verde' naam='verde' />
-        <Club name='Kwik' naam='kwik' />
-        <Club name='Scaldis' naam='kcs' />
-        <Club name='Kc Edegem' naam='vw' />
-        <Club name='Catba' naam='catba' />
-        <Club name='Minerva' naam='kcmi' />
-        <Club name='Riviera' naam='ri4a' />
         {clubs.map((club) => (
-          <Club data={club} />
+          <Club club={club} />
         ))}
       </Grid>
     </>
@@ -52,7 +45,7 @@ export async function getStaticProps() {
     "https://wdev2.be/lars21/eindwerk/api/clubs.json",
   );
   const clubs = await response.json();
-  console.log(clubs);
+  //console.log(clubs);
   return {
     props: {
       clubs,

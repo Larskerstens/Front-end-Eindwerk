@@ -27,13 +27,13 @@ function team({ team }) {
             <Image
               w='auto'
               maxH='200px'
-              src={"./images/teams/" + team + ".jpg"}
+              src={"./images/teams/" + team.naam + ".jpg"}
               alt='Foto van het team dat speelt bij Voorwaarts kkc'
               fallbackSrc='https://via.placeholder.com/300x200/025902/fbfbfb?text=VW'
             />
           </Skeleton>
           <Text fontSize='24px' fontWeight='bold' mt='24px'>
-            {team}
+            {team.naam}
           </Text>
         </Flex>
       </a>
@@ -49,7 +49,7 @@ function team({ team }) {
             _hover={{ background: "none", opacity: 0.6 }}
           />
           <DrawerHeader borderBottom='1px solid #025902' my={3} fontSize='18px'>
-            {team}
+            {team.naam}
           </DrawerHeader>
 
           <DrawerBody>
@@ -60,13 +60,9 @@ function team({ team }) {
                 margin='0 auto 15px'
                 allowToggle
               >
-                <Lid name='Lars' aname='Kerstens' team='kern' />
-                <Lid name='Imke' aname='Loos' team='kern' />
-                <Lid name='Jens' aname='Verbruggen' team='kern' />
-                <Lid name='elin' aname='Loos' team='kern' />
-                <Lid name='Lars' aname='Kerstens' team='kern' />
-                <Lid name='Imke' aname='Loos' team='kern' />
-                <Lid name='Lauren' aname='Denis' team='kern' />
+                {team.teamId.map((lid) => (
+                  <Lid lid={lid} />
+                ))}
               </Accordion>
             </Box>
           </DrawerBody>

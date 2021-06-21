@@ -11,7 +11,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-function lidkaart({ name, aname, team }) {
+function lidkaart({ lid }) {
   return (
     <>
       <AccordionItem className='liditem'>
@@ -26,9 +26,11 @@ function lidkaart({ name, aname, team }) {
             <Box flex={1} textAlign='left'>
               <Flex alignItems='center'>
                 <Text mr='25px' fontSize={["16px", "16px", "17px", "18px"]}>
-                  {name} {aname}
+                  {lid.voornaam} {lid.achternaam}
                 </Text>
-                <Text fontSize={["10px", "12px", "14px", "14px"]}>{team}</Text>
+                <Text fontSize={["10px", "12px", "14px", "14px"]}>
+                  {/* {lid.teamId.naam} */}
+                </Text>
               </Flex>
             </Box>
             <AccordionIcon />
@@ -39,26 +41,29 @@ function lidkaart({ name, aname, team }) {
             <Image
               borderRadius='3xl'
               boxSize='75px'
-              src={"./images/leden/" + name + aname + ".png"}
+              src={"./images/leden/" + lid.voornaam + lid.achternaam + ".png"}
               alt='Foto van de speler'
               fallbackSrc='./images/leden/person.png'
               mr={["1em", "4em"]}
             />
             <VStack alignItems='start'>
               <Text>
-                <strong>Leeftijd:</strong> 99
+                <strong>Leeftijd:</strong> {/* {lid.leeftijd} */}
               </Text>
               <Text>
-                <strong>Geboortedatum:</strong> 01/01/2000
+                {/* <strong>Geboortedatum:</strong> {lid.geboortedatum} */}
               </Text>
               <Text>
-                <strong>Adres:</strong> Eysegemblok 99
+                {/* <strong>Adres:</strong> {lid.straat} {lid.huisnr} */}
               </Text>
               <Text>
-                <strong>Postcode:</strong> 2000 Antwerpen
+                <strong>Postcode:</strong>{" "}
+                {/* {lid.postcodeId.code}{" "}
+                {lid.postcodeId.gemeente} */}{" "}
+                test
               </Text>
               <Text>
-                <strong>Groep:</strong> Toogdienst, Kuisploeg 01
+                <strong>Groep:</strong> {/* {lid.persoongroep.naam} */} test
               </Text>
             </VStack>
           </Flex>

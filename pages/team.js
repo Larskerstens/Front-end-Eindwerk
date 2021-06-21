@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Team from "../components/teams/team";
 
-export default function index() {
+export default function index({ teams }) {
   return (
     <>
       <Head>
@@ -31,14 +31,23 @@ export default function index() {
         gap={6}
         p='0 1.5em 2.2em'
       >
-        <Team team='Kern' />
-        <Team team='U19' />
-        <Team team='U16' />
-        <Team team='U14' />
-        <Team team='U12' />
-        <Team team='U10' />
-        <Team team='U8' />
+        {teams.map((team) => (
+          <Team team={team} />
+        ))}
       </Grid>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const response = await fetch(
+    "https://wdev2.be/lars21/eindwerk/api/teams.json",
+  );
+  const teams = await response.json();
+  return {
+    props: {
+      teams,
+    },
+    revalidate: 3600,
+  };
 }
