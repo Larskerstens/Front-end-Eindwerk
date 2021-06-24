@@ -34,6 +34,16 @@ export default function index({ groeps }) {
         {groeps.map((groep) => (
           <Groep groep={groep} />
         ))}
+        {/* <Groep name='bestuur' />
+        <Groep name='toog' />
+        <Groep name='feest' />
+        <Groep name='bestuur' />
+        <Groep name='kuisen' />
+        <Groep name='kuisen' />
+        <Groep name='kuisen' />
+        <Groep name='kuisen' />
+        <Groep name='kuisen' />
+        <Groep name='kuisen' /> */}
       </Grid>
     </>
   );

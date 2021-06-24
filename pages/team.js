@@ -34,6 +34,14 @@ export default function index({ teams }) {
         {teams.map((team) => (
           <Team team={team} />
         ))}
+        {/* <Team name='Kern' />
+        <Team name='U19' />
+        <Team name='U16' />
+        <Team name='U14' />
+        <Team name='U12' />
+        <Team name='U10' />
+        <Team name='U8' />
+        <Team name='Testteam' /> */}
       </Grid>
     </>
   );

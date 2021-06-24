@@ -8,15 +8,23 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-function agendapunt() {
+function agendapunt({
+  agenda,
+  jaar,
+  startuur,
+  stopuur,
+  maand,
+  dag,
+  maandnaam,
+}) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
     <>
       <Flex justifyContent='center'>
         <Box mr='10px' mt='8px' fontSize={["12px", "12px", "14px", "14px"]}>
-          <Text>Zo</Text>
-          <Text fontWeight='bold'>27</Text>
+          <Text>{maandnaam}</Text>
+          <Text fontWeight='bold'>{dag}</Text>
         </Box>
         <Button
           onClick={onToggle}
@@ -29,10 +37,21 @@ function agendapunt() {
               maxW='75vw'
               isTruncated
             >
-              Wedstrijd | Voorwaarts KKc - Borgerhout/Groen-Wit
+              {agenda.wedstrijdId != "" &&
+                "Wedstrijd " +
+                  agenda.wedstrijdId[0].teamId.naam +
+                  " | " +
+                  agenda.wedstrijdId[0].clubThuis.naam +
+                  " - " +
+                  agenda.wedstrijdId[0].clubUit.naam}
+              {agenda.trainingId != "" &&
+                "Training" + " | " + agenda.trainingId[0].teamId.naam}
+              {agenda.groepId != "" && agenda.groepId[0].naam}
+              {/* Wedstrijd | Voorwaarts KKc - Borgerhout/Groen-Wit */}
             </Text>
             <Text fontSize={["12px", "12px", "14px", "14px"]}>
-              Zo 27 Juni | 15u00 - 17u00
+              {/* Zo 27 Juni | 15u00 - 17u00 */}
+              {dag}/{maand}/{jaar} | {startuur} - {stopuur}
             </Text>
           </VStack>
         </Button>
@@ -40,10 +59,20 @@ function agendapunt() {
       <Collapse in={isOpen} animateOpacity>
         <Box>
           <Box className='agendapuntinfo' rounded='md' shadow='md'>
-            <Text>Locatie: Eysegemblok 22</Text>
-            <Text>Datum & Tijd: 27 Juni 2021 15:00</Text>
-            <Text>Team: Kern</Text>
-            <Text></Text>
+            <Text>
+              Locatie:{" "}
+              {agenda.wedstrijdId != "" && agenda.wedstrijdId[0].teamId.naam}
+              {agenda.trainingId != "" &&
+                "Jacob de Roorestraat 6 2650 Edegem | Kunstgrasveld"}
+              {agenda.groepId != "" &&
+                "Jacob de Roorestraat 6 2650 Edegem | Kantine"}
+            </Text>
+            {agenda.groepId != "" &&
+              agenda.groepId[0].persoons.map((persoon) => (
+                <Text>
+                  {persoon.voornaam} {persoon.achternaam}
+                </Text>
+              ))}
           </Box>
         </Box>
       </Collapse>

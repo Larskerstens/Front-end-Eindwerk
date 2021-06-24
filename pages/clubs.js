@@ -35,6 +35,15 @@ export default function index({ clubs }) {
         {clubs.map((club) => (
           <Club club={club} />
         ))}
+        {/* <Club n='Voorwaarts' afk='vw' />
+        <Club n='Verde' afk='verde' />
+        <Club n='Scaldis' afk='kcs' />
+        <Club n='Minerva' afk='kcmi' />
+        <Club n='Meeuwen' afk='kcme' />
+        <Club n='Kwik' afk='kwik' />
+        <Club n='KC Ranst' afk='kcra' />
+        <Club n='Boeckenberg' afk='bkc' />
+        <Club n='Ri4a' afk='ri4a' /> */}
       </Grid>
     </>
   );

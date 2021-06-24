@@ -1,14 +1,5 @@
 import Head from "next/head";
-import {
-  Heading,
-  Flex,
-  ScaleFade,
-  useDisclosure,
-  Button,
-  Box,
-  Text,
-  Accordion,
-} from "@chakra-ui/react";
+import { Heading, Flex, Box, Text, Accordion } from "@chakra-ui/react";
 import Lid from "../components/leden/lidkaart";
 
 export default function index({ persoons }) {
@@ -39,6 +30,23 @@ export default function index({ persoons }) {
             {persoons.map((lid) => (
               <Lid lid={lid} />
             ))}
+            {/* <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' /> */}
           </Accordion>
         </Box>
       </Flex>

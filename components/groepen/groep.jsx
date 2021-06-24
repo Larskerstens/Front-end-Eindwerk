@@ -15,11 +15,34 @@ import {
 } from "@chakra-ui/react";
 import Lid from "../leden/lidkaart";
 
-export default function groep({ groep }) {
+export default function groep({ groep /* , name */ }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const foto = () => {
+    switch (groep.naam) {
+      case "Bestuur":
+        return "./images/groepen/bestuur.png";
+      case "Jeugdbestuur":
+        return "./images/groepen/bestuur.png";
+      case "Toogploeg":
+        return "./images/groepen/toog.png";
+      case "Feest comité":
+        return "./images/groepen/feest.png";
+      case "Kuisploeg 1":
+        return "./images/groepen/kuisen.png";
+      case "Kuisploeg 2":
+        return "./images/groepen/kuisen.png";
+      case "Kuisploeg 4":
+        return "./images/groepen/kuisen.png";
+      case "Kuisploeg 5":
+        return "./images/groepen/kuisen.png";
+      case "Kuisploeg 6":
+        return "./images/groepen/kuisen.png";
+      case "Kuisploeg 3":
+        return "./images/groepen/kuisen.png";
+    }
+  };
   //console.log(data);
   return (
-    /* {groepen.map((groep) => ( */
     <>
       <a onClick={onOpen}>
         <Flex className='groepcard'>
@@ -27,12 +50,12 @@ export default function groep({ groep }) {
             w='auto'
             maxH='200px'
             //src={"./images/groepen/" + name + ".png"}
-            src={"./images/groepen/kuisen.png"}
+            src={foto()}
             alt='Voorbeeld foto van een bepaalde groep'
             fallbackSrc='https://via.placeholder.com/200?text=VW'
           />
           <Text fontSize='24px' fontWeight='bold' mt='24px'>
-            {groep.naam}
+            {groep.naam} {/* {name} */}
           </Text>
         </Flex>
       </a>
@@ -47,7 +70,7 @@ export default function groep({ groep }) {
             _hover={{ background: "none", opacity: 0.6 }}
           />
           <DrawerHeader borderBottom='1px solid #025902' my={3} fontSize='18px'>
-            {groep.naam}
+            {groep.naam} {/* {name} */}
           </DrawerHeader>
 
           <DrawerBody>
@@ -61,12 +84,28 @@ export default function groep({ groep }) {
                 {groep.persoons.map((lid) => (
                   <Lid lid={lid} />
                 ))}
+                {/* <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
+                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' /> */}
               </Accordion>
             </Box>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
     </>
-    /* ))} */
   );
 }
