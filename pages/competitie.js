@@ -7,6 +7,7 @@ export default function wedstrijd() {
     <>
       <Head>
         <title>Wedstrijden pagina | Korfbalplatform</title>
+        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
       </Head>
       <Box p={["0 6px 6px", "0 9px 9px", "0 14px 14px", "0px 18px 18px"]}>
         <Heading

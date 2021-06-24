@@ -7,6 +7,7 @@ export default function index({ teams }) {
     <>
       <Head>
         <title>Teams pagina | Korfbalplatform</title>
+        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
       </Head>
       <Heading
         as='h1'

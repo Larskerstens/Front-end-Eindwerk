@@ -8,6 +8,7 @@ export default function index({ clubs }) {
     <>
       <Head>
         <title>Clubs pagina | Korfbalplatform</title>
+        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
       </Head>
       <Heading
         as='h1'

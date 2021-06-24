@@ -7,6 +7,7 @@ export default function index({ persoons }) {
     <>
       <Head>
         <title>Leden pagina | Korfbalplatform</title>
+        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
       </Head>
       <Flex
         justifyContent='space-evenly'
@@ -28,25 +29,8 @@ export default function index({ persoons }) {
             allowToggle
           >
             {persoons.map((lid) => (
-              <Lid lid={lid} />
+              <Lid lid={lid} key={lid.id} />
             ))}
-            {/* <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-            <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' /> */}
           </Accordion>
         </Box>
       </Flex>
