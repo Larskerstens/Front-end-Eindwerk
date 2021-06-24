@@ -10,14 +10,6 @@ export default function wedstrijd() {
     openGraph: {
       url: "https://front-end-eindwerk.vercel.app/competitie",
       title: "Wedstrijden | VW Korfbalplatform",
-      images: [
-        {
-          url: "https://s3.eu-central-1.amazonaws.com/twizzit-image-cache/media_xxlarge/media/697/5b375afdb2261.JPG",
-          width: 500,
-          height: 400,
-          alt: "Het logo van de officele KBKB",
-        },
-      ],
     },
   };
   return (

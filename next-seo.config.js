@@ -13,7 +13,7 @@ export default {
       "Welkom op ons nieuw korfbalplatform waar je alles vind over de club, wat je moet weten van wedstrijden tot trainingen tot leden",
     images: [
       {
-        url: "https://s3.eu-central-1.amazonaws.com/twizzit-image-cache/media_xxlarge/media/697/5b375afdb2261.JPG",
+        url: "../public/images/clubs/korfbal.png",
         width: 500,
         height: 400,
         alt: "Het logo van de officele KBKB",
