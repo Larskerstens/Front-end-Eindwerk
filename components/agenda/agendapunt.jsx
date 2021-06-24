@@ -61,7 +61,10 @@ function agendapunt({
           <Box className='agendapuntinfo' rounded='md' shadow='md'>
             <Text>
               Locatie:{" "}
-              {agenda.wedstrijdId != "" && agenda.wedstrijdId[0].teamId.naam}
+              {agenda.wedstrijdId != "" &&
+                agenda.wedstrijdId[0].clubThuis.straat +
+                  " " +
+                  agenda.wedstrijdId[0].clubThuis.huisnr}
               {agenda.trainingId != "" &&
                 "Jacob de Roorestraat 6 2650 Edegem | Kunstgrasveld"}
               {agenda.groepId != "" &&

@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import Lid from "../leden/lidkaart";
 
-export default function groep({ groep /* , name */ }) {
+export default function groep({ groep }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const foto = () => {
     switch (groep.naam) {
@@ -41,7 +41,6 @@ export default function groep({ groep /* , name */ }) {
         return "./images/groepen/kuisen.png";
     }
   };
-  //console.log(data);
   return (
     <>
       <a onClick={onOpen}>
@@ -49,13 +48,12 @@ export default function groep({ groep /* , name */ }) {
           <Image
             w='auto'
             maxH='200px'
-            //src={"./images/groepen/" + name + ".png"}
             src={foto()}
             alt='Voorbeeld foto van een bepaalde groep'
             fallbackSrc='https://via.placeholder.com/200?text=VW'
           />
           <Text fontSize='24px' fontWeight='bold' mt='24px'>
-            {groep.naam} {/* {name} */}
+            {groep.naam}
           </Text>
         </Flex>
       </a>
@@ -70,7 +68,7 @@ export default function groep({ groep /* , name */ }) {
             _hover={{ background: "none", opacity: 0.6 }}
           />
           <DrawerHeader borderBottom='1px solid #025902' my={3} fontSize='18px'>
-            {groep.naam} {/* {name} */}
+            {groep.naam}
           </DrawerHeader>
 
           <DrawerBody>
@@ -81,26 +79,9 @@ export default function groep({ groep /* , name */ }) {
                 margin='0 auto 15px'
                 allowToggle
               >
-                {groep.persoons.map((lid) => (
-                  <Lid lid={lid} />
+                {groep.persoons.map((lid, i) => (
+                  <Lid lid={lid} key={i} />
                 ))}
-                {/* <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' /> */}
               </Accordion>
             </Box>
           </DrawerBody>

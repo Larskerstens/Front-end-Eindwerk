@@ -17,7 +17,7 @@ import {
 
 import Lid from "../leden/lidkaart";
 
-function team({ team /* ,name  */ }) {
+function team({ team }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -27,13 +27,13 @@ function team({ team /* ,name  */ }) {
             <Image
               w='auto'
               maxH='200px'
-              src={"./images/teams/" + team.naam /* name */ + ".jpg"}
+              src={"./images/teams/" + team.naam + ".jpg"}
               alt='Foto van het team dat speelt bij Voorwaarts kkc'
               fallbackSrc='https://via.placeholder.com/300x200/025902/fbfbfb?text=VW'
             />
           </Skeleton>
           <Text fontSize='24px' fontWeight='bold' mt='24px'>
-            {team.naam} {/* {name} */}
+            {team.naam}
           </Text>
         </Flex>
       </a>
@@ -49,7 +49,7 @@ function team({ team /* ,name  */ }) {
             _hover={{ background: "none", opacity: 0.6 }}
           />
           <DrawerHeader borderBottom='1px solid #025902' my={3} fontSize='18px'>
-            {team.naam} {/* {name} */}
+            {team.naam}
           </DrawerHeader>
 
           <DrawerBody>
@@ -60,26 +60,9 @@ function team({ team /* ,name  */ }) {
                 margin='0 auto 15px'
                 allowToggle
               >
-                {team.teamId.map((lid) => (
-                  <Lid lid={lid} />
+                {team.teamId.map((lid, i) => (
+                  <Lid lid={lid} key={i} />
                 ))}
-                {/* <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' />
-                <Lid vnaam='Lars' anaam='Kerstens' leeftijd='25' /> */}
               </Accordion>
             </Box>
           </DrawerBody>
