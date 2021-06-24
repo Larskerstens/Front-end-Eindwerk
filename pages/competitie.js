@@ -1,14 +1,20 @@
-import Head from "next/head";
 import { Heading, Box, Text } from "@chakra-ui/react";
 import Agenda from "../components/wedstrijden/wedstrijd";
+import { NextSeo } from "next-seo";
 
 export default function wedstrijd() {
+  const SEO = {
+    title: "Wedstrijden | VW Korfbalplatform",
+    description:
+      "De pagina waar je alle gespeelde en nog te spelen wedstrijden terug kan vinden van voorwaarts",
+    openGraph: {
+      url: "https://front-end-eindwerk.vercel.app/competitie",
+      title: "Wedstrijden | VW Korfbalplatform",
+    },
+  };
   return (
     <>
-      <Head>
-        <title>Wedstrijden pagina | Korfbalplatform</title>
-        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
-      </Head>
+      <NextSeo {...SEO} />
       <Box p={["0 6px 6px", "0 9px 9px", "0 14px 14px", "0px 18px 18px"]}>
         <Heading
           as='h1'

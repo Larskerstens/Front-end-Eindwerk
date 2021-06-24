@@ -1,14 +1,20 @@
-import Head from "next/head";
 import { Heading, Flex, Box, Text, Accordion } from "@chakra-ui/react";
 import Lid from "../components/leden/lidkaart";
+import { NextSeo } from "next-seo";
 
-export default function index({ persoons }) {
+export default function persoon({ persoons }) {
+  const SEO = {
+    title: "Leden | VW Korfbalplatform",
+    description:
+      "Alle leden van voorwaarts met adres leeftijd en geboortejaar vnd je hier terug",
+    openGraph: {
+      url: "https://front-end-eindwerk.vercel.app/leden",
+      title: "Leden | VW Korfbalplatform",
+    },
+  };
   return (
     <>
-      <Head>
-        <title>Leden pagina | Korfbalplatform</title>
-        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
-      </Head>
+      <NextSeo {...SEO} />
       <Flex
         justifyContent='space-evenly'
         flexDirection={["column", "column", "column", "row"]}

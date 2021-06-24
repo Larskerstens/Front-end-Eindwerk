@@ -50,7 +50,7 @@ export default function groep({ groep }) {
             maxH='200px'
             src={foto()}
             alt='Voorbeeld foto van een bepaalde groep'
-            fallbackSrc='https://via.placeholder.com/200?text=VW'
+            fallbackSrc='https://via.placeholder.com/640x480/025902/fbfbfb?text=VW'
           />
           <Text fontSize='24px' fontWeight='bold' mt='24px'>
             {groep.naam}

@@ -1,14 +1,20 @@
-import Head from "next/head";
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Groep from "../components/groepen/groep";
+import { NextSeo } from "next-seo";
 
-export default function index({ groeps }) {
+export default function groep({ groeps }) {
+  const SEO = {
+    title: "Groepen | VW Korfbalplatform",
+    description:
+      "Het vrijwilligerswerk dat de leden van de club voor voorwaarts doen kan je hier terug vinden met daarin in welke leden wat doen",
+    openGraph: {
+      url: "https://front-end-eindwerk.vercel.app/groep",
+      title: "Groepen | VW Korfbalplatform",
+    },
+  };
   return (
     <>
-      <Head>
-        <title>Groepen pagina | Korfbalplatform</title>
-        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
-      </Head>
+      <NextSeo {...SEO} />
       <Heading
         as='h1'
         fontSize={["22px", "26px", "30px", "34px"]}

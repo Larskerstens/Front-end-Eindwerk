@@ -1,18 +1,24 @@
-import Head from "next/head";
 import { Heading, Box, Text } from "@chakra-ui/react";
 import Agenda from "../components/agenda/agendapunt";
+import { NextSeo } from "next-seo";
 
 export default function index({ agendas }) {
+  const SEO = {
+    title: "Agenda | VW Korfbalplatform",
+    description:
+      "De pagina van agenda waar je elk evenement vind dat er plaatsvidn op voorwaarts",
+    openGraph: {
+      url: "https://front-end-eindwerk.vercel.app/",
+      title: "Agenda | VW Korfbalplatform",
+    },
+  };
   const sortedAgendas = agendas
     .sort((a, b) => a.datum.slice(5, 7) - b.datum.slice(5, 7))
     .map((agenda) => agenda.datum.slice(5, 7))
     .filter((el, index, array) => array.indexOf(el) === index);
   return (
     <>
-      <Head>
-        <title>Agenda pagina | Korfbalplatform</title>
-        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
-      </Head>
+      <NextSeo {...SEO} />
       <Box p={["0 6px 6px", "0 9px 9px", "0 14px 14px", "0px 18px 18px"]}>
         <Heading
           as='h1'
@@ -368,21 +374,6 @@ export default function index({ agendas }) {
             }
           })(),
         )}
-        {/* <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
-          Vandaag
-        </Box>
-        <Agenda />
-        <Agenda />
-        <Agenda />
-        <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
-          Juni 2021
-        </Box>
-        <Agenda />
-        <Box className='divider' fontSize={["12px", "14px", "16px", "16px"]}>
-          Juli 2021
-        </Box>
-        <Agenda />
-        <Agenda /> */}
       </Box>
     </>
   );
@@ -393,7 +384,6 @@ export async function getStaticProps() {
     "https://wdev2.be/lars21/eindwerk/api/agendas.json",
   );
   const agendas = await response.json();
-  //console.log(clubs);
   return {
     props: {
       agendas,

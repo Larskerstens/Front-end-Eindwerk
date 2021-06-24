@@ -1,15 +1,20 @@
-import Head from "next/head";
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Club from "../components/clubs/club";
+import { NextSeo } from "next-seo";
 
-export default function index({ clubs }) {
-  //console.log(clubs);
+export default function club({ clubs }) {
+  const SEO = {
+    title: "Clubs | VW Korfbalplatform",
+    description:
+      "Hier vind je alle ander clubs van de belgische korfbal met adres en logo",
+    openGraph: {
+      url: "https://front-end-eindwerk.vercel.app/clubs",
+      title: "Clubs | VW Korfbalplatform",
+    },
+  };
   return (
     <>
-      <Head>
-        <title>Clubs pagina | Korfbalplatform</title>
-        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
-      </Head>
+      <NextSeo {...SEO} />
       <Heading
         as='h1'
         fontSize={["22px", "26px", "30px", "34px"]}
@@ -46,7 +51,6 @@ export async function getStaticProps() {
     "https://wdev2.be/lars21/eindwerk/api/clubs.json",
   );
   const clubs = await response.json();
-  //console.log(clubs);
   return {
     props: {
       clubs,

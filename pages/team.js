@@ -1,14 +1,20 @@
-import Head from "next/head";
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import Team from "../components/teams/team";
+import { NextSeo } from "next-seo";
 
-export default function index({ teams }) {
+export default function team({ teams }) {
+  const SEO = {
+    title: "Teams | VW Korfbalplatform",
+    description:
+      "Teams pagina is de pagina waar je elk team kan terug vinden met daar in de spelers die spelen in dat team.",
+    openGraph: {
+      url: "https://front-end-eindwerk.vercel.app/team",
+      title: "Teams | VW Korfbalplatform",
+    },
+  };
   return (
     <>
-      <Head>
-        <title>Teams pagina | Korfbalplatform</title>
-        <meta name='viewport' content='width=device-width, maximum-scale=1.0' />
-      </Head>
+      <NextSeo {...SEO} />
       <Heading
         as='h1'
         fontSize={["22px", "26px", "30px", "34px"]}
