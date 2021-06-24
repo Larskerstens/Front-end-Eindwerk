@@ -11,14 +11,12 @@ export default {
     title: "Korfbalplatform",
     description:
       "Welkom op ons nieuw korfbalplatform waar je alles vind over de club, wat je moet weten van wedstrijden tot trainingen tot leden",
-    images: [
-      {
-        url: "../public/images/clubs/korfbal.png",
-        width: 250,
-        height: 200,
-        alt: "Het logo van de officele KBKB",
-      },
-    ],
+    images: {
+      url: "../public/images/clubs/korfbal.png",
+      width: 250,
+      height: 200,
+      alt: "Het logo van de officele KBKB",
+    },
   },
   meta: {
     name: "viewport",
