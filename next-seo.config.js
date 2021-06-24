@@ -13,7 +13,7 @@ export default {
       "Welkom op ons nieuw korfbalplatform waar je alles vind over de club, wat je moet weten van wedstrijden tot trainingen tot leden",
     images: [
       {
-        url: "./images/clubs/korfbal.png",
+        url: "https://front-end-eindwerk.vercel.app/images/clubs/korfbal.png",
         width: 500,
         height: 400,
         alt: "Het logo van de officele KBKB",
