@@ -47,10 +47,8 @@ function agendapunt({
               {agenda.trainingId != "" &&
                 "Training" + " | " + agenda.trainingId[0].teamId.naam}
               {agenda.groepId != "" && agenda.groepId[0].naam}
-              {/* Wedstrijd | Voorwaarts KKc - Borgerhout/Groen-Wit */}
             </Text>
             <Text fontSize={["12px", "12px", "14px", "14px"]}>
-              {/* Zo 27 Juni | 15u00 - 17u00 */}
               {dag}/{maand}/{jaar} | {startuur} - {stopuur}
             </Text>
           </VStack>
